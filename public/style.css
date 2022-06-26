@@ -1,0 +1,475 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* position: fixed; */
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    
+    
+}
+html {
+  --scrollbarBG: #b4bcc0;
+  --thumbBG: #4082a4;
+}
+body::-webkit-scrollbar {
+  width: 13px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 8px;
+    border: 3px solid var(--scrollbarBG);
+  }
+                                                                    /*! DEPLOYED APP */
+/** VIDEO BG */
+#myVideo {
+    position: absolute;
+    object-fit: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+/** HEADER */
+
+.header h1{
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;;
+    padding-right: 60px;
+    font-size:40px;
+    color: #fff;
+}
+
+/** FORM */
+.form{
+    display: flex;
+    justify-content: center;
+    margin-right: 8vw;
+    margin-bottom: 3vw;
+}
+
+.input{
+    position: relative;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-left: 1vw;
+    width: 44%;
+    height: 6vh;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(126, 125, 125, 0.419);
+    color: #fff;
+}
+
+.input:hover{
+    background-color:rgba(162, 162, 162, 0.553);
+}
+
+::placeholder { 
+    padding-left: 18px;;
+    color: rgb(230, 230, 230);
+    opacity: 1;
+  }
+  
+
+.addButton{
+    height: 0px;
+    /* font-size: 30px; */
+    margin-left: 1vw;
+    /* margin-bottom: 0; */
+    margin-top: 10px;;
+    border: none;
+    background-color: transparent;
+}
+
+.addButton i{
+    cursor: pointer;
+    position: absolute;
+    font-size: 30px;
+    margin-left: 1vw;
+    margin-right: 20vw;
+    border: none;
+    background-color: transparent;
+    color: rgb(251, 251, 251);
+}
+
+.addButton i:hover{
+    color: rgb(63, 211, 0);
+}
+/** NEW TASK */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    position: relative;
+}
+.item{
+    display: flex;
+    justify-content: center;
+    width: 46vw;
+    height: 6vh;
+    margin-right: 50px;
+    margin-bottom: 1rem;;
+    /* background: rgba(0, 100, 128, 0.881); */
+    background-color:rgba(171, 103, 19, 0.684);
+    border-radius: 30px;
+}
+
+
+.item_input{
+    font-size: 20px;
+    width: 65%;
+    height: 5vh;
+    margin-right: 20px;
+    border: none;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.911);
+    background-color: transparent;
+    margin-right: 20px;
+    margin-top: 4px;
+}
+
+/** BUTTONS ON TASKS  */
+.removeButton{
+   font-size: 20px;
+   margin-left: 15px;
+   border: none;
+   background-color: transparent;
+   border-radius: 20px;
+   font-weight: bold;
+   color: rgb(120, 5, 5);
+   cursor: pointer;
+   font-family: 'Poppins', sans-serif;
+}
+
+.removeButton:hover{
+    color: rgba(144, 18, 18, 0.938);
+
+}
+
+.editButton{
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    color:rgb(255, 214, 163);
+ }
+
+ .editButton:hover{
+    color:rgb(255, 184, 98);
+ }
+
+ /** MEDIA QUERIES 👇🏼 */
+
+ /* ! ADD MORE MEDIA QUERIES */
+
+ /** DESTOP */
+ @media screen and (max-width:1500px){
+     .header h1{
+         font-size:5rem;
+     }
+ }
+
+/** LAPTOP MAX+ 💻 */
+@media screen and (max-width:1280px){
+    .header h1{
+        font-size: 5rem;
+    }
+    .input{
+        font-size: 1.8rem;
+    }
+    .item_input{
+        margin-top: 4px;
+    }
+
+}
+
+/** LAPTOP 💻 */
+ @media screen and (max-width:1024px){
+    .header h1{
+        font-size: 3rem;
+    }
+    .item_input{
+        margin-top: 3px;
+        margin-left: 10px;
+    }
+    .removeButton{
+        margin-right: 10px;
+    }
+ }
+
+ /** PRO 💻 */
+ @media screen and (max-width:912px){
+     .header h1{
+         font-size:6rem;
+         margin-left: 35px;
+     }
+     .input{
+         width: 80%;
+         margin-left:15px;
+         font-size:35px;
+     }
+     .addButton i{
+         font-size:4rem;
+     }
+     .item{
+        width: 85%;
+        margin-left:35px;
+     }
+     .item_input{
+         margin-top: 8px;
+         font-size: 35px;
+         margin-left: 20px;
+     }
+     .editButton,.removeButton{
+         font-size:35px
+     }
+     .removeButton{
+        margin-right: 10px;
+    }
+
+ }
+ @media only screen and (max-width:906px){
+    .header h1{
+        font-size: 4rem;
+    }
+    .input{
+        height: 45px;
+        margin-bottom: 3rem;
+    }
+    ::placeholder{
+        font-size: 33px;
+    }
+    .item{
+        height: 54px;
+        margin-bottom: 2rem;
+    }
+    .editButton,.removeButton{
+        font-size:30px
+    }
+
+ }
+ /** 900 💻 */
+ @media only screen and (max-width:900px){
+     .header h1{
+         font-size:5.2rem;
+         margin-bottom: 2.5rem;
+     }
+     .input{
+         height: 9vh;
+         margin-bottom: 20px
+     }
+     .item{
+         height: 50px;
+     }
+     .item_input{
+         margin-bottom: 9px;
+     }
+     .editButton,.removeButton{
+         font-size: 25px;
+     }
+     
+ }
+
+
+ /** 890 💻 */
+ @media screen and (max-width:890px){
+    .header h1{
+        font-size: 6rem;
+    }
+    .input{
+        font-size:1.5rem;
+    }
+    .addButton i{
+       font-size: 45px;
+    }
+    .item_input{
+        font-size: 1.5rem;
+    }
+    .item{
+        height:50px;
+       
+    }
+    .removeButton, .editButton{
+        font-size: 1.5rem;
+    }
+ }
+
+
+ /** TABLET 📱 */
+ @media screen and (max-width:820px){
+    .header h1{
+        text-align: center;
+        font-size: 80px;
+        margin-left: 35px;
+    }
+    .input{
+        width: 80%;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .addButton i{
+        font-size: 3rem;
+    }
+    .item{
+        width: 84%;
+        margin-left: 30px;
+        margin-top: 15px;
+        
+    }
+    .item_input{
+        font-size: 2rem;
+        margin-top: 4px;;
+        margin-left: 12px;
+    }
+    .removeButton{
+        font-size: 30px;
+        margin-right: 10px;
+    }
+    .editButton{
+        font-size: 30px;
+    }
+ }
+
+ /** MINI+ 📱 */
+ @media screen and (max-width: 630px){
+     .header h1{
+         font-size:4rem;
+     }
+
+ }
+
+
+ /** MINI 📱 */
+ @media screen and (max-width: 540px){
+    .header h1{
+        font-size: 50px;
+    }
+    .input{
+        font-size:24px;
+        width: 85%;
+    }
+    .addButton i{
+        font-size: 2rem;
+
+    }
+    .item{
+        width: 90%;
+        margin-left:45px;
+
+    }
+    .item_input{
+        font-size:23px;
+    }
+    .removeButton{
+        font-size: 23px;
+    }
+    .editButton{
+        font-size:23px;
+    }
+ }
+
+
+/** MOBILE 📱 */
+ @media screen and (max-width:390px) {
+        .header h1{
+            text-align: center;
+            margin-left: 45px;
+            font-size: 39px;
+        }
+
+        .input{
+            width: 80%;
+        }
+        .item{
+            width: 95%;
+            margin-top:30px;
+            margin-left: 43px;
+            margin-bottom: 1px;
+        }
+        .item_input{
+            margin-left:10px;
+            margin-top: 3px;
+        }
+        .removeButton{
+            margin-right: 5px;
+        }
+
+ }
+
+ /** MOBILE */
+ @media screen and (max-width:375px){
+     .header h1{
+         margin-left: 55px;
+     }
+     .input{
+         margin-bottom: 5px;
+     }
+    ::placeholder{
+        font-size: 20px;
+    }
+    .item_input{
+        margin-top: 6.5px;
+    }
+    .editButton,.removeButton{
+        font-size: 20px;
+    }
+     
+ }
+
+/** FLIP PHONE 📱 */
+ @media screen and (max-width:280px){
+     .header h1{
+         font-size:2.4rem;
+         margin-bottom: 30px;
+         margin-left: 58px;
+     }
+
+     .input{
+         width: 75vw;
+         margin-left: 2px;
+         margin-bottom: 5px;
+         height: 40px;
+
+     }
+     .addButton i{
+         margin-right: 30px;
+     }
+
+     ::placeholder{
+         font-size:16px;
+        
+     }
+     .container{
+         margin-top: 2px;
+     }
+     .item_input{
+         width: 80%;
+         margin-top: 8px;
+     }
+     .editButton, .removeButton{
+         font-size: 15px;
+     }
+     .removeButton{
+         margin-left: 1px;
+     }
+
+ }
